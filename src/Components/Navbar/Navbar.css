@@ -1,0 +1,191 @@
+/* --- GLOBAL RESET --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Helps in managing padding and borders more predictably */
+}
+
+/* --- CONTAINER 1: NAVBAR --- */
+.container1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Make the container full-width */
+  z-index: 1000;
+  background-color: white; /* Give it a background so content below doesn't show through */
+}
+
+/* The parent of the logo images */
+.logo {
+  /* Use max-width for fluidity. Centered with margin: auto. */
+  max-width: 1280px;
+  width: 90%; /* Use a percentage for responsiveness */
+  height: 40px;
+  margin: 24px auto 0 auto; /* Center the container */
+  display: flex; /* Use flexbox to better control children */
+  justify-content: center;
+  align-items: center;
+  background-image: url("src/assets/images/Line1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center; /* Center the background image */
+}
+
+/* Desktop logo image */
+.logo1 {
+  /* Control width within the flexible parent */
+  width: 391px;
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Mobile logo is hidden by default */
+.mbl-logo1 {
+  display: none;
+}
+
+/* The container for the large navigation image */
+.navimg2 {
+  display: flex;
+  justify-content: center; /* Center the image within this div */
+  width: 100%;
+  padding: 12px 0;
+}
+
+.img3 {
+  /* Use max-width to ensure it scales down */
+  max-width: 716px;
+  width: 90%;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50px;
+}
+
+/* --- CONTAINER 2: HERO CONTENT --- */
+.container2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 20px; /* Space between columns */
+  /* Add padding that accounts for the fixed navbar's height */
+  padding: 150px 80px 40px 80px;
+  max-width: 1440px; /* Set a max-width for very large screens */
+  margin: 0 auto; /* Center the entire container */
+  font-family: sans-serif;
+  align-items: center; /* Vertically align items in the grid */
+}
+
+.cont21 h1 {
+  margin-bottom: 1rem;
+}
+
+/* Corrected invalid CSS: Added 'px' units */
+.pc21 {
+  width: 100%; /* Make it take the full width of its parent */
+  max-width: 521px; /* But not more than this */
+  height: auto;
+  font-weight: lighter;
+  line-height: 1.5; /* Improves readability */
+}
+
+.play {
+  display: inline-flex; /* Use inline-flex to fit content width */
+  align-items: center;
+  gap: 8px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-top: 20px;
+}
+
+.cont22 img {
+  width: 100%; /* Makes the image responsive within its grid column */
+  height: auto;
+}
+
+/* Mobile elements are hidden by default on desktop */
+.mbl-cont21,
+.mbl-cont22 {
+  display: none;
+}
+
+/* --- TABLETS (max-width: 1024px) --- */
+@media screen and (max-width: 1024px) {
+  .logo {
+    width: 95%;
+    margin-top: 16px;
+  }
+
+  .img3 {
+    max-width: 600px;
+  }
+
+  /* Adjust padding for tablets */
+  .container2 {
+    /* Change to a single-column layout */
+    grid-template-columns: 1fr;
+    padding: 120px 40px 40px 40px;
+    text-align: center; /* Center-align the content */
+  }
+
+  /* Hide the desktop-specific content */
+  .cont21,
+  .cont22 {
+    display: none;
+  }
+
+  /* Show the mobile content blocks */
+  .mbl-cont21,
+  .mbl-cont22 {
+    display: block; /* Make them visible */
+    width: 100%;
+    margin: 0 auto; /* Center the blocks */
+  }
+
+  /* Fix for the hero image on mobile */
+  .mbl-cont22 img {
+    max-width: 400px; /* Control image size */
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .play {
+    margin-left: auto; /* Helps in centering when parent is text-align:center */
+    margin-right: auto;
+  }
+}
+
+/* --- MOBILES (max-width: 600px) --- */
+@media screen and (max-width: 600px) {
+  /* Hide desktop logo and show mobile logo */
+  .logo1 {
+    display: none;
+  }
+  .mbl-logo1 {
+    display: block;
+    width: 85vw; /* Use viewport width for small screens */
+    height: auto;
+  }
+
+  .logo {
+    width: 100%;
+    margin-top: 8px;
+    background-image: none; /* Remove background line on mobile */
+    padding: 0 5%; /* Add some side padding */
+  }
+
+  /* Hide the large navigation image on small mobiles */
+  .img3 {
+    display: none;
+  }
+
+  .container2 {
+    padding: 100px 20px 20px 20px; /* Adjust padding for mobile */
+  }
+
+  .mbl-cont21 h1 {
+    font-size: 1.5rem; /* Make heading smaller for mobile */
+  }
+
+  .mbl-cont21 .pc21 {
+    font-size: 0.9rem; /* Make text smaller for mobile */
+  }
+}

@@ -1,0 +1,205 @@
+/* --- GLOBAL RESET --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Helps in managing padding and borders more predictably */
+}
+
+
+.container2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 20px; /* Space between columns */
+  /* Add padding that accounts for the fixed navbar's height */
+  padding: 150px 80px 40px 80px;
+  max-width: 1440px; /* Set a max-width for very large screens */
+  margin: 0 auto; /* Center the entire container */
+  font-family: sans-serif;
+  align-items: center; /* Vertically align items in the grid */
+}
+
+.cont21 h1 {
+  margin-bottom: 1rem;
+}
+
+/* Corrected invalid CSS: Added 'px' units */
+.pc21 {
+  width: 100%; /* Make it take the full width of its parent */
+  max-width: 521px; /* But not more than this */
+  height: auto;
+  font-weight: lighter;
+  line-height: 1.5; /* Improves readability */
+}
+
+.play {
+  display: inline-flex; /* Use inline-flex to fit content width */
+  align-items: center;
+  gap: 8px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-top: 20px;
+}
+
+.cont22 img {
+  width: 100%; /* Makes the image responsive within its grid column */
+  height: auto;
+}
+
+/* Mobile elements are hidden by default on desktop */
+.mbl-cont21,
+.mbl-cont22 {
+  display: none;
+}
+
+
+.container3{
+  width: 1440;
+  height: 664;
+  padding-top: 32px;
+  padding-right: 80px;
+  padding-bottom: 32px;
+  padding-left: 80px;
+  gap: 36px;
+
+}
+.con31{
+  width: 600;
+  height: 292;
+  border-radius: 20px;
+}
+
+
+.con31-a h1{
+  width: 313px;
+  height: 64px;
+
+}
+.con31-a h5{
+  width: 240px;
+  height: 16px;
+
+
+}
+
+
+.istanbol{
+    width: 240px;
+    height: 20px;
+    
+
+}
+.con31a{
+    width: 600px;
+    height: 292px;
+    padding: 20px;
+    border-radius: 20px;
+    background-image: url('F:\projects\React_Arman_Bhay\Amlaak\amlak\src\assets\images\istanbol.svg');
+
+
+
+}
+
+.con31_2{
+    width: 292px;
+    height: 292px;
+    border-radius: 20px;
+    background-image: url('F:\projects\React_Arman_Bhay\Amlaak\amlak\src\assets\images\istanbol2.svg');
+
+
+}
+.con31-3{
+    width: 292px;
+    height: 292px;
+    border-radius: large;
+
+}
+
+
+.con32-3{
+    width: 600px;
+    height: 292px;
+    border-radius: border-radius/lg;
+
+}
+.con32-2{
+    width: 292px;
+    height: 292px;
+    border-radius: large;
+
+
+}
+.con32-1{
+    width: 292px;
+    height: 292px;
+    border-radius: large;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- TABLETS (max-width: 1024px) --- */
+@media screen and (max-width: 1024px) {
+  .container2 {
+    /* Change to a single-column layout */
+    grid-template-columns: 1fr;
+    padding: 120px 40px 40px 40px;
+    text-align: center; /* Center-align the content */
+  }
+
+  /* Hide the desktop-specific content */
+  .cont21,
+  .cont22 {
+    display: none;
+  }
+
+  /* Show the mobile content blocks */
+  .mbl-cont21,
+  .mbl-cont22 {
+    display: block; /* Make them visible */
+    width: 100%;
+    margin: 0 auto; /* Center the blocks */
+  }
+
+  /* Fix for the hero image on mobile */
+  .mbl-cont22 img {
+    max-width: 400px; /* Control image size */
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .play {
+    margin-left: auto; /* Helps in centering when parent is text-align:center */
+    margin-right: auto;
+  }
+}
+
+/* --- MOBILES (max-width: 600px) --- */
+@media screen and (max-width: 600px) {
+  /* Hide desktop logo and show mobile logo */
+  
+  .container2 {
+    padding: 100px 20px 20px 20px; /* Adjust padding for mobile */
+  }
+
+  .mbl-cont21 h1 {
+    font-size: 1.5rem; /* Make heading smaller for mobile */
+  }
+
+  .mbl-cont21 .pc21 {
+    font-size: 0.9rem; /* Make text smaller for mobile */
+  }
+}
