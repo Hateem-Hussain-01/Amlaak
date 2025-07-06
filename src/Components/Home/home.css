@@ -1,21 +1,20 @@
-/* --- GLOBAL RESET --- */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Helps in managing padding and borders more predictably */
+  box-sizing: border-box; 
 }
 
 
 .container2 {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two equal columns */
-  gap: 20px; /* Space between columns */
-  /* Add padding that accounts for the fixed navbar's height */
+  grid-template-columns: 1fr 1fr; 
+  gap: 20px; 
+  
   padding: 150px 80px 40px 80px;
-  max-width: 1440px; /* Set a max-width for very large screens */
-  margin: 0 auto; /* Center the entire container */
+  max-width: 1440px; 
+  margin: 0 auto; 
   font-family: sans-serif;
-  align-items: center; /* Vertically align items in the grid */
+  align-items: center;
 }
 
 .cont21 h1 {
@@ -24,15 +23,15 @@
 
 /* Corrected invalid CSS: Added 'px' units */
 .pc21 {
-  width: 100%; /* Make it take the full width of its parent */
-  max-width: 521px; /* But not more than this */
+  width: 100%;
+  max-width: 521px; 
   height: auto;
   font-weight: lighter;
-  line-height: 1.5; /* Improves readability */
+  line-height: 1.5; 
 }
 
 .play {
-  display: inline-flex; /* Use inline-flex to fit content width */
+  display: inline-flex; 
   align-items: center;
   gap: 8px;
   border: 1px solid black;
@@ -42,11 +41,11 @@
 }
 
 .cont22 img {
-  width: 100%; /* Makes the image responsive within its grid column */
+  width: 100%; 
   height: auto;
 }
 
-/* Mobile elements are hidden by default on desktop */
+
 .mbl-cont21,
 .mbl-cont22 {
   display: none;
@@ -150,56 +149,55 @@
 
 
 
-/* --- TABLETS (max-width: 1024px) --- */
+
 @media screen and (max-width: 1024px) {
   .container2 {
-    /* Change to a single-column layout */
+   
     grid-template-columns: 1fr;
     padding: 120px 40px 40px 40px;
-    text-align: center; /* Center-align the content */
+    text-align: center; 
   }
 
-  /* Hide the desktop-specific content */
+  
   .cont21,
   .cont22 {
     display: none;
   }
 
-  /* Show the mobile content blocks */
+ 
   .mbl-cont21,
   .mbl-cont22 {
-    display: block; /* Make them visible */
+    display: block;
     width: 100%;
-    margin: 0 auto; /* Center the blocks */
+    margin: 0 auto; 
   }
 
-  /* Fix for the hero image on mobile */
+  
   .mbl-cont22 img {
-    max-width: 400px; /* Control image size */
+    max-width: 400px; 
     width: 100%;
     height: auto;
     margin-top: 20px;
   }
 
   .play {
-    margin-left: auto; /* Helps in centering when parent is text-align:center */
+    margin-left: auto; 
     margin-right: auto;
   }
 }
 
-/* --- MOBILES (max-width: 600px) --- */
+
 @media screen and (max-width: 600px) {
-  /* Hide desktop logo and show mobile logo */
-  
+ 
   .container2 {
-    padding: 100px 20px 20px 20px; /* Adjust padding for mobile */
+    padding: 100px 20px 20px 20px;
   }
 
   .mbl-cont21 h1 {
-    font-size: 1.5rem; /* Make heading smaller for mobile */
+    font-size: 1.5rem; 
   }
 
   .mbl-cont21 .pc21 {
-    font-size: 0.9rem; /* Make text smaller for mobile */
+    font-size: 0.9rem;
   }
 }
